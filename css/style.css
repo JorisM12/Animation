@@ -1,0 +1,56 @@
+main {
+    display: grid;
+    grid-template-columns: 100px 600px 100px 600px ;
+    grid-template-rows: 200px 200px 200px;
+    margin-left: 5%;
+}
+
+div.anim_A {
+    background-color: black;
+    grid-column-start: 1;
+    grid-row: 1 / 1;
+    border-radius: 35%;
+    height: 30px;
+    color: white;
+    text-align: center;
+}
+
+.bloc {
+    background-color: gray;
+    border-radius: 25px;
+    height: 250px;
+}
+
+#carre {
+    text-align: center;
+}
+#tourne {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+#balle {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    margin-top: 100px;
+}
+#loader {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    margin-top: 200px;
+
+}
+#queue {
+    grid-row-start: 1;
+    grid-column-start: 4;
+}
+#elem {
+    grid-row: 2;
+    grid-column-start: 4;
+    margin-top: 100px;
+    height: 400px;
+
+}

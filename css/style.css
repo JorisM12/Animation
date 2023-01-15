@@ -15,6 +15,17 @@ div.anim_A {
     text-align: center;
 }
 
+@keyframes rotation_A {
+    from {transform: rotate(0deg);
+         background-color: blueviolet;}
+    to   {transform: rotate(360deg);
+            background-color: brown;}
+}
+
+
+
+
+
 .bloc {
     background-color: gray;
     border-radius: 25px;
@@ -27,9 +38,15 @@ div.anim_A {
 #tourne {
     height: 100px;
     width: 100px;
-    background-color: red;
+    /* background-color: red; */
     margin-left: 40%;
     margin-top: 5%;
+    /* animation-name: exemple;
+    animation-duration: 5s; */
+    animation-name: rot;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+
 }
 
 #balle {

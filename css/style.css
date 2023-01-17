@@ -5,6 +5,7 @@ main {
     margin-left: 5%;
 }
 
+/* Première animation  */
 div.anim_A {
     background-color: black;
     grid-column-start: 1;
@@ -22,64 +23,34 @@ div.anim_A {
 
 }
 
-
+/* 2e animation  */
 @keyframes rotation_A {
     from {transform: rotate(0deg);
          background-color: blueviolet;}
     to   {transform: rotate(360deg);
         background-color: brown;}
 }
-
-
-
-
-
 .bloc {
     background-color: gray;
     border-radius: 25px;
     height: 250px;
 }
-
 #carre {
     text-align: center;
 }
 #tourne {
     height: 100px;
     width: 100px;
-    /* background-color: red; */
     margin-left: 40%;
     margin-top: 5%;
-    /* animation-name: exemple;
-    animation-duration: 5s; */
     animation-name: rotation_A;
     animation-duration: 5s;
     animation-iteration-count:infinite;
+    animation-direction: alternate;
 
 }
 
-#balle {
-    grid-row-start: 2;
-    grid-column-start: 2;
-    margin-top: 100px;
-}
-#loader {
-    grid-row-start: 3;
-    grid-column-start: 2;
-    margin-top: 200px;
-
-}
-#queue {
-    grid-row-start: 1;
-    grid-column-start: 4;
-}
-#elem {
-    grid-row: 2;
-    grid-column-start: 4;
-    margin-top: 100px;
-    height: 400px;
-
-}
-
+/* 3e animation  */
 #tube {
     height: 100px;
     width: 10px;
@@ -87,20 +58,13 @@ div.anim_A {
     margin-left: 50%;
     margin-top: 10%;
 }
-
 #balle h3{
     text-align: center;
 }
-
-@keyframes rebond {
-    0% { transform: translate3d(0, -100px, 0);}
-    20% { transform: translate3d(0, 0, 0);}
-    40% { transform: translate3d(0, -80px, 0);}
-    60%  { transform: translate3d(0, 0, 0);}
-    80% { transform: translate3d(0, -50px, 0);}
-    90% { transform: translate3d(0, 0px, 0);}
-    95% { transform: translate3d(0, -10px, 0);}
-    100% { transform: translate3d(0, 0, 0);} 
+#balle {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    margin-top: 100px;
 }
 #boule {
     height: 9px;
@@ -113,14 +77,42 @@ div.anim_A {
     position: absolute;
     margin-top: 90px;
 }
+#boule {
+    height: 9px;
+    width: 9px;
+    border-radius: 100%;
+    background-color: blue;
+    animation-name: rebond;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    margin-top: 90px;
+}
+@keyframes rebond {
+    0% { transform: translate3d(0, -100px, 0);}
+    20% { transform: translate3d(0, 0, 0);}
+    40% { transform: translate3d(0, -80px, 0);}
+    60%  { transform: translate3d(0, 0, 0);}
+    80% { transform: translate3d(0, -50px, 0);}
+    90% { transform: translate3d(0, 0px, 0);}
+    95% { transform: translate3d(0, -10px, 0);}
+    100% { transform: translate3d(0, 0, 0);} 
+}
 
+
+/* 4e animation  */
 #loader h3 {
     text-align: center;
+}
+#loader {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    margin-top: 200px;
+
 }
 #chargement {
     height: 100px;
     width: 250px;
-    /* background-color: black; */
     margin-left: 175px;
     margin-top: 50px;
     display: flex;
@@ -128,19 +120,10 @@ div.anim_A {
     align-items: center;
 }
 
-@keyframes flash {
-    0% {background-color: black;} 
-    2% {background-color: rgb(250, 250, 250);}
-    /* 50% {background-color: black;}   
-    75%  {background-color: blue;} */
-    100% {background-color: black;}
-}
-
 .disc {
     height: 75px;
     width: 75px;
     border-radius: 100%;
-    /* background-color: blue; */
     animation-name: flash;
     animation-duration: 5s;
     animation-iteration-count:infinite;
@@ -149,10 +132,46 @@ div.anim_A {
 #discB {
     animation-delay: 2s;
 }
-/* #discA {
-    animation-delay: ;
-} */
 #discC {
     animation-delay: 3s;
+}
+@keyframes flash {
+    0% {background-color: black;} 
+    2% {background-color: rgb(250, 250, 250);}
+    100% {background-color: black;}
+}
+
+
+/* 5e animation  */
+
+/* 6e animation */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#queue {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    text-align: center;
+}
+#elem {
+    grid-row: 2;
+    grid-column-start: 4;
+    margin-top: 100px;
+    height: 400px;
+    text-align: center;
 
 }
+
+
+

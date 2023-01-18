@@ -7,16 +7,18 @@ main {
 
 /* Première animation  */
 div.anim_A {
+    position: relative;
     background-color: black;
     grid-column-start: 1;
     grid-row: 1 / 1;
-    border-radius: 35%;
+    padding: 10px;
     height: 30px;
     color: white;
     text-align: center;
     transition: 5s;
-    margin: 15px;
+    margin: 15px; 
 }
+
 .anim_A:hover {
     background-color: blue;
     height: 800px;
@@ -89,14 +91,14 @@ div.anim_A {
     margin-top: 90px;
 }
 @keyframes rebond {
-    0% { transform: translate3d(0, -100px, 0);}
-    20% { transform: translate3d(0, 0, 0);}
-    40% { transform: translate3d(0, -80px, 0);}
-    60%  { transform: translate3d(0, 0, 0);}
-    80% { transform: translate3d(0, -50px, 0);}
-    90% { transform: translate3d(0, 0px, 0);}
-    95% { transform: translate3d(0, -10px, 0);}
-    100% { transform: translate3d(0, 0, 0);} 
+    0% {transform: translate3d(0, -100px, 0);}
+    20% {transform: translate3d(0, 0, 0);}
+    40% {transform: translate3d(0, -80px, 0);}
+    60% {transform: translate3d(0, 0, 0);}
+    80% {transform: translate3d(0, -50px, 0);}
+    90% {transform: translate3d(0, 0px, 0);}
+    95% {transform: translate3d(0, -10px, 0);}
+    100% {transform: translate3d(0, 0, 0);} 
 }
 
 
@@ -141,22 +143,62 @@ div.anim_A {
     100% {background-color: black;}
 }
 
-
 /* 5e animation  */
 
-/* 6e animation */
+#ac {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  animation-name: queue;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
 
+.carreA {
+  position:absolute;
+  top: 20px;
+  margin-left: 10px;
+}
 
+.carreB {
+  position:absolute;
+  top: 20px;
+  margin-left: 10px;
+  animation-delay: 1s;
+}
+.carreC {
+  position:absolute;
+  top: 20px;
+  margin-left: 10px;
+  animation-delay: 2s;
+}
 
+.carreD {
+  position:absolute;
+  top: 20px;
+  margin-left: 10px;
+  animation-delay: 3s;
+}
+.carreE {
+  position:absolute;
+  top: 20px;
+  margin-left: 10px;
+  animation-delay: 4s;
+}
 
+@keyframes queue {
+  0% {translate:0,0;
+      transform: rotateZ(0) ;
+      background-color: aqua;}
+  25% {translate:550px 0px ;
+      background-color: beige;}
+  75% {translate:550px 210px;
+      transform: rotateZ(1440deg) ;}
+  85% {translate:0px 210px;
+      background-color: chartreuse;}
+  100% {translate:0px 0px;}
 
-
-
-
-
-
-
-
+}
 
 
 #queue {
@@ -173,5 +215,87 @@ div.anim_A {
 
 }
 
+  
+/* 6e animation */
+  .containerAB {
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective-origin: 0px 0px;
+    perspective: 2500px;
 
+  }
+  
+  .containerAC {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation-name: caro;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: 187px;
+  }
+.containerAC div {
+    border: 1px solid black;
+    border-radius: 10%;
+    width: 30px;
+    height: 15px;
+  }
+   
+  .slide.one {
+    transform: rotateY(0deg) translateZ(80px);
+    background-color: grey;
+  }
+  .slide.two {
+    transform: rotateY(40deg) translateZ(80px);
+    background-color: rgb(170, 170, 170);
+  }
+  .slide.three {
+    transform: rotateY(80deg) translateZ(80px);
+    background-color: gainsboro;
+  }
+  .slide.four {
+    transform: rotateY(120deg) translateZ(80px);
+    background-color: blanchedalmond;
+  }
+  .slide.five {
+    transform: rotateY(160deg) translateZ(80px);
+    background-color: cyan;
+  }
+  .slide.six {
+    transform: rotateY(200deg) translateZ(80px);
+    background-color: greenyellow;
+  }
+  .slide.seven {
+    transform: rotateY(240deg) translateZ(80px);
+    background-color: khaki;
+  }
+  .slide.eight {
+    transform: rotateY(280deg) translateZ(80px);
+    background-color: deepskyblue;
+  }
+  .slide.nine {
+    transform: rotateY(320deg) translateZ(80px);
+    background-color: lemonchiffon;
+  }
 
+  @keyframes caro {
+    0% {transform: rotateX(0) rotateZ(0) translate(0);}
+    25% {transform: rotateX(90deg) rotateZ(0deg) translateX(300px);}
+    50% {transform: rotateX(0deg) rotateZ(0deg) translateX(300px) translateY(200px);}
+    75% {transform: rotateX(0) rotateZ(0deg) translateX(0px) translateY(200px);} 
+    85% {transform: rotateX(90deg) rotateZ(0deg) translateX(0px) translateY(200px);} 
+    100% {transform: rotateX(0) rotateZ(0) translate(0);}   
+  }
+
+  .containerAC div {
+    transform: rotateX(50deg);
+  }

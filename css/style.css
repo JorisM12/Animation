@@ -22,8 +22,8 @@ div.anim_A {
 .anim_A:hover {
     background-color: blue;
     height: 800px;
-
 }
+
 
 /* 2e animation  */
 @keyframes rotation_A {
@@ -87,6 +87,7 @@ div.anim_A {
     animation-name: rebond;
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
+    animation-timing-function:linear;
     position: absolute;
     margin-top: 90px;
 }
@@ -152,6 +153,7 @@ div.anim_A {
   animation-name: queue;
   animation-duration: 10s;
   animation-iteration-count: infinite;
+  animation-timing-function:linear;
 }
 
 .carreA {
@@ -184,6 +186,10 @@ div.anim_A {
   top: 20px;
   margin-left: 10px;
   animation-delay: 4s;
+}
+
+#ac p {
+  font-size: 0.5em;
 }
 
 @keyframes queue {
@@ -234,6 +240,7 @@ div.anim_A {
     animation-name: caro;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+    animation-timing-function:linear;
   }
   
   .slide {
@@ -288,12 +295,11 @@ div.anim_A {
   }
 
   @keyframes caro {
-    0% {transform: rotateX(0) rotateZ(0) translate(0);}
-    25% {transform: rotateX(90deg) rotateZ(0deg) translateX(300px);}
-    50% {transform: rotateX(0deg) rotateZ(0deg) translateX(300px) translateY(200px);}
-    75% {transform: rotateX(0) rotateZ(0deg) translateX(0px) translateY(200px);} 
-    85% {transform: rotateX(90deg) rotateZ(0deg) translateX(0px) translateY(200px);} 
-    100% {transform: rotateX(0) rotateZ(0) translate(0);}   
+    0% {transform:rotateX(0) translate(0);}
+    25% {transform:rotateX(90deg) translateX(300px);}
+    50% {transform:rotateX(0deg)translateX(300px) translateY(200px);}
+    75% {transform:rotateX(0) translateX(0px) translateY(200px);} 
+    100% {transform:rotateX(90deg) translateX(0px) translateY(200px);} 
   }
 
   .containerAC div {

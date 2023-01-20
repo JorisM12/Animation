@@ -22,6 +22,7 @@ div.anim_A {
 .anim_A:hover {
     background-color: blue;
     height: 800px;
+
 }
 
 
@@ -243,7 +244,7 @@ div.anim_A {
     animation-timing-function:linear;
   }
   
-  .slide {
+  .blocZ {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -257,39 +258,39 @@ div.anim_A {
     height: 15px;
   }
    
-  .slide.one {
+  .blocZ.un {
     transform: rotateY(0deg) translateZ(80px);
     background-color: grey;
   }
-  .slide.two {
+  .blocZ.deux {
     transform: rotateY(40deg) translateZ(80px);
     background-color: rgb(170, 170, 170);
   }
-  .slide.three {
+  .blocZ.trois {
     transform: rotateY(80deg) translateZ(80px);
     background-color: gainsboro;
   }
-  .slide.four {
+  .blocZ.quatre {
     transform: rotateY(120deg) translateZ(80px);
     background-color: blanchedalmond;
   }
-  .slide.five {
+  .blocZ.cinq {
     transform: rotateY(160deg) translateZ(80px);
     background-color: cyan;
   }
-  .slide.six {
+  .blocZ.six {
     transform: rotateY(200deg) translateZ(80px);
     background-color: greenyellow;
   }
-  .slide.seven {
+  .blocZ.sept {
     transform: rotateY(240deg) translateZ(80px);
     background-color: khaki;
   }
-  .slide.eight {
+  .blocZ.huit {
     transform: rotateY(280deg) translateZ(80px);
     background-color: deepskyblue;
   }
-  .slide.nine {
+  .blocZ.neuf {
     transform: rotateY(320deg) translateZ(80px);
     background-color: lemonchiffon;
   }
